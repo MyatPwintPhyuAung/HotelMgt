@@ -68,6 +68,7 @@ namespace HotelMgt
             this.roomToolStripMenuItem.Name = "roomToolStripMenuItem";
             this.roomToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.roomToolStripMenuItem.Text = "Room";
+            this.roomToolStripMenuItem.Click += new System.EventHandler(this.roomToolStripMenuItem_Click);
             // 
             // FrmMain
             // 

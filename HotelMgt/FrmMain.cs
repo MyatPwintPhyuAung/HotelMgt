@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using HotelMgt.Master;
 namespace HotelMgt
 {
     public partial class FrmMain : Form
@@ -15,6 +15,12 @@ namespace HotelMgt
         public FrmMain()
         {
             InitializeComponent();
+        }
+
+        private void roomToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Master.Room.FrmList frm = new Master.Room.FrmList();
+            frm.ShowDialog();
         }
     }
 }

@@ -16,5 +16,11 @@ namespace HotelMgt.Master.Room
         {
             InitializeComponent();
         }
+
+        private void BtnCreate_Click(object sender, EventArgs e)
+        {
+            FrmEntry frm = new FrmEntry();
+            frm.ShowDialog();
+        }
     }
 }
