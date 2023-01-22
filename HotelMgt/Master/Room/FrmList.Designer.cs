@@ -29,6 +29,8 @@ namespace HotelMgt.Master.Room
         /// </summary>
         private void InitializeComponent()
         {
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             this.LblTitle = new System.Windows.Forms.Label();
             this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -56,9 +58,32 @@ namespace HotelMgt.Master.Room
             // radGridView1
             // 
             this.radGridView1.BackColor = System.Drawing.Color.LightGray;
+            this.radGridView1.Cursor = System.Windows.Forms.Cursors.Default;
             this.radGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radGridView1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.radGridView1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.radGridView1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.radGridView1.Location = new System.Drawing.Point(0, 93);
+            // 
+            // radGridView1
+            // 
+            gridViewTextBoxColumn3.EnableExpressionEditor = false;
+            gridViewTextBoxColumn3.FieldName = "RoomId";
+            gridViewTextBoxColumn3.HeaderText = "ID";
+            gridViewTextBoxColumn3.Name = "RoomId";
+            gridViewTextBoxColumn3.Width = 100;
+            gridViewTextBoxColumn4.EnableExpressionEditor = false;
+            gridViewTextBoxColumn4.FieldName = "RoomName";
+            gridViewTextBoxColumn4.HeaderText = "Name";
+            gridViewTextBoxColumn4.Name = "RoomName";
+            gridViewTextBoxColumn4.Width = 150;
+            this.radGridView1.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4});
+            this.radGridView1.MasterTemplate.EnableAlternatingRowColor = true;
             this.radGridView1.Name = "radGridView1";
+            this.radGridView1.ReadOnly = true;
+            this.radGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.radGridView1.Size = new System.Drawing.Size(1200, 599);
             this.radGridView1.TabIndex = 1;
             this.radGridView1.Text = "radGridView1";
@@ -135,8 +160,9 @@ namespace HotelMgt.Master.Room
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmList";
-            this.Text = "FrmList";
+            this.Text = "Room List";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
             this.panel1.ResumeLayout(false);

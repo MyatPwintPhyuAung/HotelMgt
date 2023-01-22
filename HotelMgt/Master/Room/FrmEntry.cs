@@ -14,6 +14,7 @@ namespace HotelMgt.Master.Room
 {
     public partial class FrmEntry : Form
     {
+        public bool IsEdit = false;
         RoomTableAdapter RoomAdpt = new RoomTableAdapter();
         RoomDAL roomDAL = new RoomDAL();
         public FrmEntry()
@@ -23,26 +24,28 @@ namespace HotelMgt.Master.Room
 
         private void FrmEntry_Load(object sender, EventArgs e)
         {
-
+            if (!IsEdit)
+            {
+                TxtId.Text = roomDAL.AutoID().ToString();
+            }
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            MasterDS.RoomDataTable roomTbl = new MasterDS.RoomDataTable();
-            MasterDS.RoomRow roomRow = roomTbl.NewRoomRow();
-            roomRow.RoomId = int.Parse(TxtId.Text);
-            roomRow.RoomName = TxtName.Text;
-            roomRow.Fees = double.Parse(TxtFees.Text);
-            roomRow.Capacity = int.Parse(TxtCapacity.Text);
-            roomTbl.AddRoomRow(roomRow);
-            if (roomDAL.SaveRoom(roomTbl))
-                MessageBox.Show("Successfully Save");
-            else MessageBox.Show("Error in save data!!");
+         
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void FrmEntry_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
         }
     }
 }

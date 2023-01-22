@@ -64,17 +64,18 @@ namespace HotelMgt.Master.Room
             // 
             // TxtId
             // 
+            this.TxtId.Enabled = false;
             this.TxtId.Location = new System.Drawing.Point(122, 60);
             this.TxtId.Name = "TxtId";
             this.TxtId.Size = new System.Drawing.Size(191, 26);
-            this.TxtId.TabIndex = 2;
+            this.TxtId.TabIndex = 0;
             // 
             // TxtName
             // 
             this.TxtName.Location = new System.Drawing.Point(122, 106);
             this.TxtName.Name = "TxtName";
             this.TxtName.Size = new System.Drawing.Size(191, 26);
-            this.TxtName.TabIndex = 4;
+            this.TxtName.TabIndex = 1;
             // 
             // label2
             // 
@@ -90,7 +91,7 @@ namespace HotelMgt.Master.Room
             this.TxtCapacity.Location = new System.Drawing.Point(122, 198);
             this.TxtCapacity.Name = "TxtCapacity";
             this.TxtCapacity.Size = new System.Drawing.Size(191, 26);
-            this.TxtCapacity.TabIndex = 8;
+            this.TxtCapacity.TabIndex = 3;
             // 
             // label4
             // 
@@ -106,7 +107,7 @@ namespace HotelMgt.Master.Room
             this.TxtFees.Location = new System.Drawing.Point(122, 152);
             this.TxtFees.Name = "TxtFees";
             this.TxtFees.Size = new System.Drawing.Size(191, 26);
-            this.TxtFees.TabIndex = 4;
+            this.TxtFees.TabIndex = 2;
             // 
             // label5
             // 
@@ -119,20 +120,22 @@ namespace HotelMgt.Master.Room
             // 
             // BtnSave
             // 
+            this.BtnSave.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.BtnSave.Location = new System.Drawing.Point(42, 249);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(100, 35);
-            this.BtnSave.TabIndex = 9;
+            this.BtnSave.TabIndex = 4;
             this.BtnSave.Text = "&Save";
             this.BtnSave.UseVisualStyleBackColor = true;
             this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // BtnCancel
             // 
+            this.BtnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BtnCancel.Location = new System.Drawing.Point(224, 249);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(100, 35);
-            this.BtnCancel.TabIndex = 10;
+            this.BtnCancel.TabIndex = 5;
             this.BtnCancel.Text = "&Cancel";
             this.BtnCancel.UseVisualStyleBackColor = true;
             this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
@@ -161,6 +164,7 @@ namespace HotelMgt.Master.Room
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Room Entry";
             this.Load += new System.EventHandler(this.FrmEntry_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmEntry_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,14 +174,14 @@ namespace HotelMgt.Master.Room
 
         private System.Windows.Forms.Label LblEntry;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox TxtId;
-        private System.Windows.Forms.TextBox TxtName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox TxtCapacity;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox TxtFees;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button BtnSave;
-        private System.Windows.Forms.Button BtnCancel;
+        public System.Windows.Forms.TextBox TxtId;
+        public System.Windows.Forms.TextBox TxtName;
+        public System.Windows.Forms.TextBox TxtCapacity;
+        public System.Windows.Forms.TextBox TxtFees;
+        public System.Windows.Forms.Button BtnSave;
+        public System.Windows.Forms.Button BtnCancel;
     }
 }
