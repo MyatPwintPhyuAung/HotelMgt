@@ -7,30 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HotelMgt.DBA;
 
-namespace HotelMgt.Master.Room
+
+namespace HotelMgt.Master.Customer
 {
-    public partial class FrmList : Form
+    public partial class FrmCustomerList : Form
     {
-        public FrmList()
-
-
-
-
+        public FrmCustomerList()
         {
             InitializeComponent();
-        }
-
-        private void BtnCreate_Click(object sender, EventArgs e)
-        {
-            FrmEntry frm = new FrmEntry();
-            frm.ShowDialog();
         }
 
         private void BtnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
 
+        private void BtnCreate_Click(object sender, EventArgs e)
+        {
+            FrmCustomerEntry frm = new FrmCustomerEntry();
+            frm.ShowDialog();
         }
     }
 }

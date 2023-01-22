@@ -22,5 +22,28 @@ namespace HotelMgt
             Master.Room.FrmList frm = new Master.Room.FrmList();
             frm.ShowDialog();
         }
+
+        private void roomTypeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Master.RoomType.FrmRTypeList frm = new Master.RoomType.FrmRTypeList();
+            frm.ShowDialog();
+        }
+
+        private void customerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Master.Customer.FrmCustomerList frm = new Master.Customer.FrmCustomerList();
+            frm.ShowDialog();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Master.RoomFacality.FrmRFacalityList frm = new Master.RoomFacality.FrmRFacalityList();
+            frm.ShowDialog();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

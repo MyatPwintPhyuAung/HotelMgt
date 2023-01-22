@@ -1,7 +1,7 @@
 ﻿
-namespace HotelMgt.Master.Room
+namespace HotelMgt.Master.Customer
 {
-    partial class FrmList
+    partial class FrmCustomerList
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,6 @@ namespace HotelMgt.Master.Room
         /// </summary>
         private void InitializeComponent()
         {
-            this.LblTitle = new System.Windows.Forms.Label();
             this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BtnClose = new System.Windows.Forms.Button();
@@ -37,21 +36,11 @@ namespace HotelMgt.Master.Room
             this.BtnEdit = new System.Windows.Forms.Button();
             this.BtnDelete = new System.Windows.Forms.Button();
             this.BtnCreate = new System.Windows.Forms.Button();
+            this.LblTitle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // LblTitle
-            // 
-            this.LblTitle.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.LblTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.LblTitle.Location = new System.Drawing.Point(0, 0);
-            this.LblTitle.Name = "LblTitle";
-            this.LblTitle.Size = new System.Drawing.Size(1200, 30);
-            this.LblTitle.TabIndex = 0;
-            this.LblTitle.Text = "Rooms";
-            this.LblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // radGridView1
             // 
@@ -60,7 +49,7 @@ namespace HotelMgt.Master.Room
             this.radGridView1.Location = new System.Drawing.Point(0, 93);
             this.radGridView1.Name = "radGridView1";
             this.radGridView1.Size = new System.Drawing.Size(1200, 599);
-            this.radGridView1.TabIndex = 1;
+            this.radGridView1.TabIndex = 4;
             this.radGridView1.Text = "radGridView1";
             // 
             // panel1
@@ -74,7 +63,7 @@ namespace HotelMgt.Master.Room
             this.panel1.Location = new System.Drawing.Point(0, 30);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1200, 63);
-            this.panel1.TabIndex = 2;
+            this.panel1.TabIndex = 5;
             // 
             // BtnClose
             // 
@@ -123,7 +112,18 @@ namespace HotelMgt.Master.Room
             this.BtnCreate.UseVisualStyleBackColor = true;
             this.BtnCreate.Click += new System.EventHandler(this.BtnCreate_Click);
             // 
-            // FrmList
+            // LblTitle
+            // 
+            this.LblTitle.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.LblTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.LblTitle.Location = new System.Drawing.Point(0, 0);
+            this.LblTitle.Name = "LblTitle";
+            this.LblTitle.Size = new System.Drawing.Size(1200, 30);
+            this.LblTitle.TabIndex = 3;
+            this.LblTitle.Text = "Customers";
+            this.LblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // FrmCustomerList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -132,10 +132,9 @@ namespace HotelMgt.Master.Room
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.LblTitle);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "FrmList";
-            this.Text = "FrmList";
+            this.Name = "FrmCustomerList";
+            this.Text = "Customer List";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
@@ -146,7 +145,6 @@ namespace HotelMgt.Master.Room
 
         #endregion
 
-        private System.Windows.Forms.Label LblTitle;
         private Telerik.WinControls.UI.RadGridView radGridView1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button BtnClose;
@@ -154,5 +152,6 @@ namespace HotelMgt.Master.Room
         private System.Windows.Forms.Button BtnEdit;
         private System.Windows.Forms.Button BtnDelete;
         private System.Windows.Forms.Button BtnCreate;
+        private System.Windows.Forms.Label LblTitle;
     }
 }

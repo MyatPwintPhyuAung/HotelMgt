@@ -8,29 +8,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HotelMgt.Master.Room
+namespace HotelMgt.Master.RoomFacality
 {
-    public partial class FrmList : Form
+    public partial class FrmRFacalityList : Form
     {
-        public FrmList()
-
-
-
-
+        public FrmRFacalityList()
         {
             InitializeComponent();
-        }
-
-        private void BtnCreate_Click(object sender, EventArgs e)
-        {
-            FrmEntry frm = new FrmEntry();
-            frm.ShowDialog();
         }
 
         private void BtnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
 
+        private void BtnCreate_Click(object sender, EventArgs e)
+        {
+            FrmRFacalityEntry frm = new FrmRFacalityEntry();
+            frm.ShowDialog();
         }
     }
 }

@@ -57,7 +57,10 @@
     <Reference Include="TelerikCommon, Version=2014.3.1021.20, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\CustomerDAL.cs" />
     <Compile Include="DAL\RoomDAL.cs" />
+    <Compile Include="DAL\RoomFacalityDAL.cs" />
+    <Compile Include="DAL\RoomTypeDAL.cs" />
     <Compile Include="DBA\MasterDS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -68,6 +71,48 @@
     </Compile>
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Customer\FrmCustomerEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Customer\FrmCustomerEntry.Designer.cs">
+      <DependentUpon>FrmCustomerEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Customer\FrmCustomerList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Customer\FrmCustomerList.Designer.cs">
+      <DependentUpon>FrmCustomerList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\RoomFacalityItem\FrmRFacalityItemEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\RoomFacalityItem\FrmRFacalityItemEntry.Designer.cs">
+      <DependentUpon>FrmRFacalityItemEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\RoomFacality\FrmRFacalityEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\RoomFacality\FrmRFacalityEntry.Designer.cs">
+      <DependentUpon>FrmRFacalityEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\RoomFacality\FrmRFacalityList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\RoomFacality\FrmRFacalityList.Designer.cs">
+      <DependentUpon>FrmRFacalityList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\RoomType\FrmRTypeEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\RoomType\FrmRTypeEntry.Designer.cs">
+      <DependentUpon>FrmRTypeEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\RoomType\FrmRTypeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\RoomType\FrmRTypeList.Designer.cs">
+      <DependentUpon>FrmRTypeList.cs</DependentUpon>
     </Compile>
     <Compile Include="Master\Room\FrmEntry.cs">
       <SubType>Form</SubType>
@@ -86,6 +131,27 @@
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Master\Customer\FrmCustomerEntry.resx">
+      <DependentUpon>FrmCustomerEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Customer\FrmCustomerList.resx">
+      <DependentUpon>FrmCustomerList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\RoomFacalityItem\FrmRFacalityItemEntry.resx">
+      <DependentUpon>FrmRFacalityItemEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\RoomFacality\FrmRFacalityEntry.resx">
+      <DependentUpon>FrmRFacalityEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\RoomFacality\FrmRFacalityList.resx">
+      <DependentUpon>FrmRFacalityList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\RoomType\FrmRTypeEntry.resx">
+      <DependentUpon>FrmRTypeEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\RoomType\FrmRTypeList.resx">
+      <DependentUpon>FrmRTypeList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Master\Room\FrmEntry.resx">
       <DependentUpon>FrmEntry.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,6 +166,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="DBA\MasterDS.xsc">
       <DependentUpon>MasterDS.xsd</DependentUpon>
@@ -125,5 +192,24 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\images %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel-08.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\hotel-08.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\photo-1498503182468-3b51cbb6cb24.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\resort-leisure-swimming-pool-resort-town-wallpaper-preview.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\ocean-summer-summertime-hotel-wallpaper-preview.jpg" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -37,7 +37,7 @@ namespace HotelMgt.Master.Room
             roomTbl.AddRoomRow(roomRow);
             if (roomDAL.SaveRoom(roomTbl))
                 MessageBox.Show("Successfully Save");
-            else MessageBox.Show("Error in save data");
+            else MessageBox.Show("Error in save data!!");
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)

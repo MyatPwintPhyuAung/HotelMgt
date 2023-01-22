@@ -44,7 +44,7 @@ namespace HotelMgt.Master.Room
             // 
             // LblEntry
             // 
-            this.LblEntry.BackColor = System.Drawing.Color.CadetBlue;
+            this.LblEntry.BackColor = System.Drawing.Color.LightSkyBlue;
             this.LblEntry.Dock = System.Windows.Forms.DockStyle.Top;
             this.LblEntry.Location = new System.Drawing.Point(0, 0);
             this.LblEntry.Name = "LblEntry";
@@ -97,9 +97,9 @@ namespace HotelMgt.Master.Room
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(27, 201);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 20);
+            this.label4.Size = new System.Drawing.Size(70, 20);
             this.label4.TabIndex = 7;
-            this.label4.Text = "label4";
+            this.label4.Text = "Capacity";
             // 
             // TxtFees
             // 
@@ -113,9 +113,9 @@ namespace HotelMgt.Master.Room
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(27, 155);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 20);
+            this.label5.Size = new System.Drawing.Size(45, 20);
             this.label5.TabIndex = 5;
-            this.label5.Text = "label3";
+            this.label5.Text = "Fees";
             // 
             // BtnSave
             // 
@@ -141,6 +141,7 @@ namespace HotelMgt.Master.Room
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(379, 313);
             this.Controls.Add(this.BtnCancel);
             this.Controls.Add(this.BtnSave);
@@ -157,7 +158,8 @@ namespace HotelMgt.Master.Room
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmEntry";
-            this.Text = "FrmEntry";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Room Entry";
             this.Load += new System.EventHandler(this.FrmEntry_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
